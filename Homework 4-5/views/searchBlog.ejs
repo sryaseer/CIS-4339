@@ -1,0 +1,21 @@
+<%- include("./partials/header") %> <%- include("./partials/navbar") %>
+<div class="homePage pt-3" style="height: 88vh;">
+<div class="container pt-5 py-5">
+    <h4 style="text-align: center"><%= returnSearch %> said:</h4>
+
+    <% blogs.reverse() %> <% blogs.forEach(blog => { %>
+    <div class="card mt-3">
+        <div class="card-body">
+            <div class="row justify-content-between">
+                <h4 class="card-title pl-3"><%= blog.title %></h4>
+                <p class="text-muted">
+                    <small><small style="color: rgb(194, 194, 194)">published at: <%= blog.postedAt %></small></small>
+                </p>
+            </div>
+            <p class="card-text"><%= blog.content.slice(0, 99) %> ....</p>
+        </div>
+    </div>
+    <%}) %>
+</div>
+</div>
+<%- include("./partials/footer") %>

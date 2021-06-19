@@ -1,0 +1,26 @@
+<%- include("./partials/header") %> <%- include("./partials/navbar") %>
+<div class="homePage">
+<h4 class="text-center pt-4">Welcome to the Wall <br />This is where everyone's blogs are displayed!</h4>
+<div class="container mt-3 py-5">
+    <h4 class="pl-2">Most Recently:</h4>
+
+    <% blogs.reverse() %> <% blogs.forEach(blog => { %>
+    <div class="card mt-3">
+        <div class="card-body">
+            <div class="row justify-content-between border-bottom border-primary rounded-bottom">
+                <h5 class="ml-3"><%= blog.firstName %> said:</h5>
+            </div>
+            <div class="row justify-content-between">
+                <h4 class="card-title pl-3 mt-1"><%= blog.title %></h4>
+                <p class="text-muted">
+                    <small><small style="color: rgb(194, 194, 194)">published at: <%= blog.postedAt %></small></small>
+                </p>
+            </div>
+
+            <p class="card-text"><%= blog.content.slice(0, 280) %> ....</p>
+        </div>
+    </div>
+    <%}) %>
+</div>
+</div>
+<%- include("./partials/footer") %>

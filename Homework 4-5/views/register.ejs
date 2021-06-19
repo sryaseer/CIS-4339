@@ -1,0 +1,58 @@
+<%- include("./partials/header") %>
+<div class="homePage pt-2 pb-3" style="height: 93vh;">
+    <div class="col text-center ">
+        <a href="/" class="btn btn-primary text-center">Already have an Account?</a>
+    </div>
+    
+    <div class="card container mt-3">
+        <h1 class="mt-2">Register Account</h1>
+        <form action="/register" method="POST">
+            <div class="form-group">
+                <label for="InputEmail"
+                    >Email address<span style="color: red"><b>*</b></span></label
+                >
+                <input
+                    type="email"
+                    name="email"
+                    class="form-control"
+                    id="InputEmail"
+                    aria-describedby="emailHelp"
+                    required
+                />
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+                <label for="Password"
+                    >Password<span style="color: red"><b>*</b></span></label
+                >
+                <input type="password" name="password" class="form-control" id="Password" required />
+            </div>
+            <div class="form-group">
+                <label for="firstName"
+                    >First Name<span style="color: red"><b>*</b></span></label
+                >
+                <input type="text" name="firstName" class="form-control" id="firstName" required />
+            </div>
+            <div class="form-group">
+                <label for="lastName"
+                    >Last Name<span style="color: red"><b>*</b></span></label
+                >
+                <input type="text" name="lastName" class="form-control" id="lastName" required />
+            </div>
+            <div class="form-group">
+                <label for="nickName">Nickname</label>
+                <input type="text" name="nickName" class="form-control" id="nickName" />
+            </div>
+            <div class="form-group">
+                <label for="birthday">Birthday</label>
+                <input type="date" name="birthday" class="form-control" id="birthday" />
+            </div>
+            <button type="submit" class="btn btn-primary mb-3">Register</button>
+        </form>
+    </div>
+
+</div>
+
+
+
+<%- include("./partials/footer") %>

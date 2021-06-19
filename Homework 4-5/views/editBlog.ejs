@@ -1,0 +1,27 @@
+<%- include("./partials/header") %> <%- include("./partials/navbar") %>
+<div  style="
+background: #c2e59c;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #64b3f4, #c2e59c);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #64b3f4, #c2e59c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+height: 88vh;
+">
+    <h4 class="text-center pt-4">Edit this blog</h4>
+
+    <div class="container mt-5 py-5">
+        <div class="card mt-3">
+            <div class="card-body">
+                <div class="row justify-content-between">
+                    <h4 class="card-title pl-3"><%= blog.title %></h4>
+                    <p class="text-muted">
+                        <small><small style="color: rgb(194, 194, 194)">published at: <%= blog.postedAt %></small></small>
+                    </p>
+                </div>
+                <p class="card-text"><%= blog.content %>.</p>
+                <a href=" /delete/<%= blog._id %>" class="btn btn-outline-danger">Delete</a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<%- include("./partials/footer") %>
